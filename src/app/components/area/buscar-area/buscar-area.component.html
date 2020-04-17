@@ -1,0 +1,144 @@
+<div class="small-12 medium-10 columns" id="ifAplicacion" style="height: 570px;">
+    <div class="row align-center">
+        <div class="columns small-12">
+            <h5 class="titleAplication">{{titulo}}</h5>
+        </div>
+
+    </div>
+
+
+    <div id="divBody" class="rgba">
+        <div id="divMenu" class="row">
+            <div class="medium-2 columns menuList" id="divBuscar"><a routerLink="/area/nuevo" id="bBuscar"
+                    class="button btnGnral" accesskey="n">Nuevo</a>
+            </div>
+        </div>
+
+        <div id="capaConsulta" class="row" style="display: block;">
+
+            <div class="columns medium-12" id="divFormConsulta">
+
+                <form #formBuscar="ngForm" id="formCons_sah_area" autocomplete="off">
+                    <div id="divFF_1" class="row medium-12 columns">
+                        <div class="columns small-12 medium-2"><label for="codigo" class="formInput"><span>Código</span>
+                                <div class=" row inputForm">
+                                    <input type="text" maxlength="5" name="codigo" #codigo="ngModel"
+                                        [(ngModel)]="filtro.codigo">
+                                </div>
+                            </label></div>
+                        <div class="columns small-12 medium-4">
+                            <label for="nombre" class="formInput"><span>Nombre</span>
+                                <div class=" row inputForm">
+                                    <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="filtro.nombre">
+                                </div>
+                            </label>
+                        </div>
+                        <div class="columns small-12 medium-2"><label for="requiereComanda"
+                                class="formInput"><span>Requiere Comanda</span><select name="requiereComanda"
+                                    #requiereComanda="ngModel" [(ngModel)]="filtro.requiere_comanda">
+                                    <option value="" selected> - - Seleccione Requiere Comanda - - </option>
+                                    <option value="true">Sí</option>
+                                    <option value="false" selected="true">No</option>
+                                </select></label></div>
+                        <div class="columns small-12 medium-2"><label for="estado" class="formInput"><span>Estado</span>
+                                <select name="estado" #estado="ngModel" [(ngModel)]="filtro.estado">
+                                    <option value="" selected> - - Seleccione Estado - - </option>
+                                    <option value="activo" selected="true">ACTIVO</option>
+                                    <option value="inactivo">INACTIVO</option>
+                                </select></label></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="columns small-12 medium-12">
+                <div class="row divTitulo">
+                    <div class="small-12 columns tituloListado large-2 medium-2">Código</div>
+                    <div class="small-12 columns tituloListado large-4 medium-4">Nombre</div>
+                    <div class="small-12 columns tituloListado large-1 medium-1">Requiere Comanda</div>
+                </div>
+
+                <div id="divDetalle" class="row contenedorListado" style="height: 436.733px;">
+
+                    <div *ngFor="let area of areas | async | myFilter:filtro" [routerLink]="['/area/editar', area._id]"
+                        class="row rowCampo hover">
+
+                        <div style="text-align: center;"
+                            class="small-12 columns visibleResponsive campoListado large-2 medium-2"></div>
+                        <div class="columns small-12 hiddenResponsive">
+                            <div class="row">
+                                <div class="small-6 columns campoListado large-1 medium-1 text"
+                                    style="text-align: right;">Código</div>
+                            </div>
+                        </div>
+                        <div style="text-align: center;"
+                            class="small-12 columns visibleResponsive campoListado large-2 medium-2 text">
+                            {{area.codigo}}</div>
+
+                        <div class="columns small-12 hiddenResponsive">
+                            <div class="row">
+                                <div class="small-6 columns campoListado large-1 medium-1 text"
+                                    style="text-align: left;">{{area.codigo}}</div>
+                            </div>
+                        </div>
+                        <div style="text-align: center;"
+                            class="small-12 columns visibleResponsive campoListado large-4 medium-4"></div>
+                        <div class="columns small-12 hiddenResponsive">
+                            <div class="row">
+                                <div class="small-6 columns campoListado large-1 medium-1 text"
+                                    style="text-align: right;">Nombre</div>
+                            </div>
+                        </div>
+                        <div style="text-align: center;"
+                            class="small-12 columns visibleResponsive campoListado large-4 medium-4 text">
+                            {{area.nombre}}</div>
+
+                        <div class="columns small-12 hiddenResponsive">
+                            <div class="row">
+                                <div class="small-6 columns campoListado large-1 medium-1 text"
+                                    style="text-align: left;">ALOJAMIENTO</div>
+                            </div>
+                        </div>
+                        <div style="text-align: center;"
+                            class="small-12 columns visibleResponsive campoListado large-1 medium-1"></div>
+                        <div class="columns small-12 hiddenResponsive">
+                            <div class="row">
+                                <div class="small-6 columns campoListado large-1 medium-1 text"
+                                    style="text-align: right;">Requiere Comanda</div>
+                            </div>
+                        </div>
+
+                        <div *ngIf="area.requiere_comanda" style="text-align: center;"
+                            class="small-12 columns visibleResponsive campoListado large-1 medium-1 text">Si</div>
+                        <div *ngIf="area.requiere_comanda" class="columns small-12 hiddenResponsive">
+                            <div class="row">
+                                <div class="small-6 columns campoListado large-1 medium-1 text"
+                                    style="text-align: left;">Si</div>
+                            </div>
+                        </div>
+
+                        <div *ngIf="!area.requiere_comanda" style="text-align: center;"
+                            class="small-12 columns visibleResponsive campoListado large-1 medium-1 text">No</div>
+                        <div *ngIf="!area.requiere_comanda" class="columns small-12 hiddenResponsive">
+                            <div class="row">
+                                <div class="small-6 columns campoListado large-1 medium-1 text"
+                                    style="text-align: left;">No</div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+        </div>
+
+    </div>
+</div>

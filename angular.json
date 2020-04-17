@@ -20,10 +20,29 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "dexie.min.js",
+                "input": "node_modules/dexie/dist/",
+                "output": "./"
+              },
+              "src/manifest.webmanifest",
+              "src/my-service-worker.js",
+              "src/sw-sync.js"
             ],
             "styles": [
+              "node_modules/sweetalert2/src/sweetalert2.scss",
+              "src/assets/css/foundation.css",
+              "src/assets/css/foundation-datepicker.min.css",
+              "src/assets/css/custom-foundation.css",
+              "src/assets/css/normalize.css",
+              "src/assets/css/sah/main.css",
+              "src/assets/css/sah/user.css",
+              "src/assets/css/sah/app.css",
+              "src/assets/css/fonts.css",
+              "src/assets/css/font-awesome.css",
+              "src/assets/css/typo.css",
+              "src/assets/css/jquery.datetimepicker.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -55,7 +74,9 @@
                   "maximumWarning": "6kb",
                   "maximumError": "10kb"
                 }
-              ]
+              ],
+              "serviceWorker": true,
+              "ngswConfigPath": "ngsw-config.json"
             }
           }
         },
@@ -85,7 +106,10 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.webmanifest",
+              "src/my-service-worker.js",
+              "src/sw-sync.js"
             ],
             "styles": [
               "src/styles.css"
@@ -119,6 +143,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "fuera-linea"
 }

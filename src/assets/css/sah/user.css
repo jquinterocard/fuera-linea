@@ -1,0 +1,761 @@
+﻿.bckLogin {
+    background: url(../../images/fondo.png);
+    height: 80px;
+    position: relative;
+}
+
+.body-login {
+    background: url(../../images/background/puerta.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.loginInput {
+    margin-bottom: 40px;
+}
+
+.loginInput span {
+    color: #5D615D;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: block;
+    font-size: 1.1em;
+}
+
+.grid-encabezado-documento {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(1.1rem, auto);
+    grid-auto-rows: minmax(1.1rem, auto);
+    text-align: center;
+}
+
+.grid-mensaje-documento {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(1.1rem, auto);
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+    /* grid-auto-rows: minmax(1.1rem, auto); */
+    text-align: center;
+}
+
+.grid-fila-documento {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: minmax(1.1rem, auto);
+    grid-auto-rows: minmax(1.1rem, auto);
+    text-align: left;
+}
+
+.grid-fila-impuesto {
+    display: grid;
+    grid-template-columns: 4fr 2fr 2fr 2fr;
+    grid-template-rows: minmax(1.1rem, auto);
+    grid-auto-rows: minmax(1.1rem, auto);
+    text-align: right;
+}
+
+.grid-encabezado-impuesto {
+    display: grid;
+    grid-template-columns: 4fr 2fr 2fr 2fr;
+    grid-template-rows: minmax(1.1rem, auto);
+    grid-auto-rows: minmax(1.1rem, auto);
+    text-align: right;
+}
+
+.grid-fila-medio-pago {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: minmax(1.1rem, auto);
+    grid-auto-rows: minmax(1.1rem, auto);
+    text-align: right;
+}
+
+.grid-aceptacion {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: minmax(1.1rem, auto);
+    grid-auto-rows: minmax(1.1rem, auto);
+    text-align: left;
+}
+
+.grid-encabezado-prefactura-item {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr 2fr 2fr 2fr 2fr;
+    grid-template-rows: minmax(0.5rem, auto);
+    grid-auto-rows: minmax(0.5rem, auto);
+    text-align: center;
+    border-top: solid 1px;
+    border-bottom: double 1px;
+    font-size: 0.8rem;
+    grid-gap: 0.5rem;
+}
+
+.grid-fila-prefactura-item {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr 2fr 2fr 2fr 2fr;
+    grid-template-rows: minmax(0.5rem, auto);
+    grid-auto-rows: minmax(0.5rem, auto);
+    font-size: 0.8rem;
+    grid-gap: 0.5rem;
+}
+
+.grid-total-prefactura-item {
+    display: grid;
+    grid-template-columns: 7fr 3fr 4fr;
+    grid-template-rows: minmax(0.9rem, auto);
+    grid-auto-rows: minmax(0.9rem, auto);
+    border-top: solid 1px;
+    border-bottom: double 1px;
+    font-size: 0.9rem;
+}
+
+.grid-encabezado-factura-item {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr 2fr;
+    grid-template-rows: minmax(1.1rem, auto);
+    grid-auto-rows: minmax(1.1rem, auto);
+    text-align: center;
+    border-top: solid 1px;
+    border-bottom: double 1px;
+}
+
+.grid-fila-factura-item {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr 2fr;
+    grid-template-rows: minmax(1.1rem, auto);
+    grid-auto-rows: minmax(1.1rem, auto);
+}
+
+.grid-total-factura-item {
+    display: grid;
+    grid-template-columns: 6fr 3fr;
+    grid-template-rows: minmax(1.1rem, auto);
+    grid-auto-rows: minmax(1.1rem, auto);
+    border-top: solid 1px;
+    border-bottom: double 1px;
+}
+
+.grid-pos-empresa-documento {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2rem;
+    grid-auto-rows: minmax(1.1rem, auto);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.6rem;
+    font-weight: bold;
+}
+
+.grid-pos-encabezado-documento {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(1.1rem, auto);
+    grid-auto-rows: minmax(1.1rem, auto);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.5rem;
+    font-style: normal;
+}
+
+.grid-pos-mensaje-documento {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(1.1rem, auto);
+    border-top: solid 0.5px;
+    border-bottom: solid 0.5px;
+    grid-auto-rows: minmax(1.1rem, auto);
+    text-align: center;
+    font-size: 0.5rem;
+    font-style: normal;
+    padding-bottom: 0.8rem;
+}
+
+.grid-pos-1linea-documento {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(1.1rem, auto);
+    grid-auto-rows: minmax(1.1rem, auto);
+    text-align: left;
+    font-size: 0.5rem;
+    font-style: normal;
+}
+
+.grid-pos-fila-documento {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: minmax(1.1rem, auto);
+    grid-auto-rows: minmax(1.1rem, auto);
+    text-align: left;
+    font-size: 0.5rem;
+    font-style: normal;
+}
+
+.grid-pos-fila-impuesto {
+    display: grid;
+    grid-template-columns: 4fr 2fr 2fr 3fr;
+    grid-template-rows: minmax(1.1rem, auto);
+    grid-auto-rows: minmax(1.1rem, auto);
+    text-align: right;
+    font-size: 0.5rem;
+    font-style: normal;
+}
+
+.grid-pos-encabezado-impuesto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(1.1rem, auto);
+    grid-auto-rows: minmax(1.1rem, auto);
+    text-align: right;
+    font-size: 0.6rem;
+    font-style: normal;
+}
+
+.grid-pos-fila-medio-pago {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: minmax(1.1rem, auto);
+    grid-auto-rows: minmax(1.1rem, auto);
+    text-align: right;
+    font-size: 0.5rem;
+    font-style: normal;
+}
+
+.grid-pos-aceptacion {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: minmax(1.1rem, auto);
+    grid-auto-rows: minmax(1.1rem, auto);
+    text-align: left;
+    font-size: 0.5rem;
+    font-style: normal;
+}
+
+.grid-pos-encabezado-prefactura-item {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr 2fr 2fr;
+    grid-template-rows: minmax(1.1rem, auto);
+    grid-auto-rows: minmax(1.1rem, auto);
+    text-align: center;
+    border-top: solid 1px;
+    border-bottom: double 1px;
+    font-size: 0.5rem;
+    font-style: normal;
+}
+
+.grid-pos-fila-prefactura-item {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr 2fr 2fr;
+    grid-template-rows: minmax(1.1rem, auto);
+    grid-auto-rows: minmax(1.1rem, auto);
+    font-size: 0.6rem;
+    font-style: normal;
+}
+
+.grid-pos-total-prefactura-item {
+    display: grid;
+    grid-template-columns: 6fr 5fr;
+    grid-template-rows: minmax(1.1rem, auto);
+    grid-auto-rows: minmax(1.1rem, auto);
+    border-top: solid 1px;
+    border-bottom: double 1px;
+    font-size: 0.6rem;
+    font-style: normal;
+}
+
+.grid-pos-encabezado-factura-item {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr 2fr;
+    grid-template-rows: minmax(1rem, auto);
+    grid-auto-rows: minmax(1rem, auto);
+    text-align: center;
+    border-top: solid 1px;
+    border-bottom: double 1px;
+    font-size: 0.5rem;
+    font-style: normal;
+}
+
+.grid-pos-fila-factura-item {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr 2fr;
+    grid-template-rows: minmax(1.1rem, auto);
+    grid-auto-rows: minmax(1.1rem, auto);
+    font-size: 0.5rem;
+    font-style: normal;
+}
+
+.grid-pos-total-factura-item {
+    display: grid;
+    grid-template-columns: 6fr 3fr;
+    grid-template-rows: minmax(1rem, auto);
+    grid-auto-rows: minmax(1rem, auto);
+    border-top: solid 1px;
+    border-bottom: double 1px;
+    font-size: 0.5rem;
+    font-style: normal;
+}
+
+h5 {
+    font-size: 1.8rem;
+    font-family: robotomedium, sans-serif;
+}
+
+h6 {
+    font-size: 1.5rem;
+    font-family: robotomedium, sans-serif;
+}
+
+.loginInput input, .loginInput input:focus, .loginInput select {
+    border-radius: 0.5rem;
+    box-shadow: none;
+    font-size: 1.2em;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+.contenedorLogin {
+  height: 23rem;
+  padding: 2rem;
+  border-radius: 2rem;
+  border: solid 2px;
+  border-top-color: #fff;
+  border-left-color: #54676e;
+  background: transparent;
+  overflow-y:auto;
+  overflow-x: hidden;
+}
+
+.btnGnral {
+    border-radius: 13px;
+    background: #003666;
+    /*background: #BB007F;*/
+    text-transform: uppercase;
+    margin: 5px;
+}
+
+.btnGnral:hover, .btnGnral:focus {
+    background: #69A1F5;
+    /*background: #AA006D;*/
+}
+
+.btnMenu {
+    border-radius: 13px;
+    background: #003366;
+	font-size: 0.9rem;
+}
+
+.btnMenuSuperior {
+    border-radius: 13px;
+    background: #003366;
+	font-size: 0.9rem;
+}
+
+.btnSubmenu {
+    border-radius: 13px;
+    background: #0068A1;
+	font-size: 0.8rem;
+}
+
+.btnBorder, .btnBorder:hover, .btnBorder:focus {
+    border-radius: 13px;
+    background: #f3f3f3;
+    text-transform: uppercase;
+    color: #303F9F;
+    /*color: #BB007F;*/
+    border: 1px solid #303F9F;
+    /*border: 1px solid #BB007F;*/
+    margin: 5px auto;
+}
+
+.btnGray {
+    border-radius: 13px;
+    background: #dcdcdc;
+    text-transform: uppercase;
+}
+
+    .btnGray:hover, .btnGray:focus {
+        background: #c5c5c5;
+    }
+
+.btnDarkGray {
+    border-radius: 13px;
+    background: #5D615D;
+    text-transform: uppercase;
+}
+
+    .btnDarkGray:hover, .btnDarkGray:focus {
+        background: #5D615D;
+    }
+
+
+.btnLightGreen {
+    border-radius: 13px;
+    background: #F08A24;
+    text-transform: uppercase;
+	margin: 5px;
+}
+
+.btnLightGreen:hover, .btnLightGreen:focus {
+    background: #EBAB6A;
+}
+
+.btnExcel {
+    border-radius: 13px;
+    background: #22712C;
+    text-transform: uppercase;
+    margin: 5px;
+}
+
+.btnExcel:hover, .btnExcel:focus {
+    background: #61CC6F;
+}
+
+
+.btnBorderGreen, .btnBorderGreen:hover, .btnBorderGreen:focus {
+    border-radius: 13px;
+    background: #fff;
+    text-transform: uppercase;
+    color: #5DA29A;
+    border: 1px solid #5DA29A;
+}
+
+.btnBorderGray, .btnBorderGray:hover, .btnBorderGray:focus {
+    border-radius: 13px;
+    background: #fff;
+    text-transform: uppercase;
+    color: #5D615D;
+    border: 1px solid #5D615D;
+}
+
+
+.login {
+    margin-top: -20px;
+}
+
+.login.no-image{
+    margin-top: -100px;
+}
+
+.imgLogin {
+    /* height: 180px; */
+    margin-bottom: 10px;
+}
+
+.wrongText {
+    font-size: 1.2em;
+    margin: 30px 0;
+}
+
+    .wrongText em {
+        font-weight: 600;
+    }
+
+.contUser {
+    padding-top: 30px;
+    height: 160px;
+    overflow: hidden;
+}
+
+.imgUser {
+    height: 150px;
+    width: 150px;
+    border: 1px solid #69A1F5;
+    /*border: 1px solid #AA006D;*/
+}
+
+.graph {
+    margin: 20px 0;
+}
+
+.titleGraph {
+    color: #5DA29A;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.1em;
+    margin-top: 15px;
+}
+
+.userPoints {
+    padding-top: 15px;
+    border-top: 2px dashed #ccc;
+}
+
+    .userPoints > div:last-child {
+        border-left: 2px dashed #ccc;
+        padding-left: 25px;
+    }
+
+.points {
+    text-transform: uppercase;
+    color: #BDBCBC;
+    line-height: 1;
+    font-size: 3em;
+    font-family: 'robotobold';
+}
+
+.values{
+
+    text-transform: uppercase;
+    color: #BDBCBC;
+    line-height: 1;
+    font-family: 'robotobold';
+}
+
+.textPoints {
+    color: #5DA29A;
+    text-transform: uppercase;
+}
+
+.clientTitle {
+    color: #5e5e5e;
+    font-size: 1.9em;
+    margin: 30px 0;
+}
+
+.iconSale {
+    color: #5DA29A;
+    vertical-align: middle;
+    float: right;
+    font-size: 2em;
+    position: relative;
+}
+
+    .iconSale span {
+        background: #5DA29A;
+        font-family: 'robotoregular';
+        position: absolute;
+        color: #fff;
+        font-size: 0.25em;
+        padding: 5px 8px;
+        border-radius: 50%;
+        right: -10px;
+    }
+
+.linkMina {
+    position: absolute;
+    color: #303F9F;
+    /*color: #BB007F;*/
+    font-family: 'robotomedium';
+    font-size: 0.875em;
+    top: 20px;
+    right: 5%;
+}
+
+    .linkMina i {
+        margin-right: 5px;
+    }
+
+    .linkMina:hover, .linkMenu:focus, .linkMenu:visited {
+        color: #303F9F;
+        /*color: #BB007F;*/
+    }
+
+.rightLink {
+    left: 4%;
+    right: initial;
+}
+
+/*MoreInfo Product*/
+.userProduct {
+    border-bottom: 1px solid #5e5e5e;
+    padding: 20px 0;
+}
+
+.deleteProd, .deleteProd:hover, .deleteProd:focus, .deleteProd:visited {
+    color: #5e5e5e;
+    text-transform: uppercase;
+}
+
+    .deleteProd i {
+        font-size: 2.2em;
+    }
+
+    .deleteProd p {
+        font-family: "robotomedium";
+        font-size: 0.85em;
+    }
+
+.deleteText {
+    color: #5DA29A;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.confirmDelete {
+    display: none;
+}
+
+    .confirmDelete button + button {
+        margin-bottom: 5px;
+    }
+
+.totalSale {
+    margin: 15px auto;
+}
+  .totalSale > div {
+        border-right: 2px dashed #ccc;
+    }
+    .totalSale > div:last-child {
+        border-right: none;
+    }
+
+    .totalSale p {
+        text-transform: uppercase;
+        font-size: 0.9em;
+    }
+
+.tags p {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 13px;
+    padding: 9px 20px;
+}
+
+#cancelSale {
+    width: 100% !important;
+    max-width: initial;
+    background: rgba(255,255,255,0.8);
+    top: 0 !important;
+    height: 100%;
+}
+
+    #cancelSale .btnBorder, #cancelSale .btnBorder:hover, #cancelSale .btnBorder:focus {
+        background: rgba(255,255,255,0.4);
+    }
+
+.contentCancel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 250px;
+    margin: auto;
+}
+
+/*Lista de Pedidos*/
+.bckOrder {
+    background: url(../../images/fondo.png);
+    height: 150px;
+    text-align: center;
+}
+
+.vertical-align .mainTitle {
+    margin: 0 auto;
+}
+
+.infoOrder {
+    margin-bottom: 15px;
+}
+
+    .infoOrder .productInfo span.orderP {
+        border: 1px solid;
+        padding: 0;
+        min-width: 110px;
+        display: inline-block;
+        text-align: center;
+    }
+
+.orderList {
+    border-bottom: 2px dashed #9FA09E;
+    padding: 20px;
+
+}
+
+.listOrder > li:nth-child(odd){
+    border-right: 2px dashed #9FA09E;
+}
+
+    .orderList h3 {
+        color: #5F615E;
+        font-size: 1.3em;
+        text-transform: uppercase;
+    }
+
+.flipSection {
+    width: 100%;
+    height: 260px;
+    position: relative;
+    margin: 0px auto 10px;
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800px;
+}
+
+.cardOver {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+    .cardOver .back {
+        -webkit-transform: rotateY( 180deg );
+        -moz-transform: rotateY( 180deg );
+        -o-transform: rotateY( 180deg );
+        transform: rotateY( 180deg );
+        position: absolute;
+        width: 100%;
+        height: 0;
+        z-index: 1;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        transition: all .8s;
+        -webkit-transition: all .8s;
+        -moz-transition: all .8s;
+        -ms-transition: all .8s;
+    }
+
+    .cardOver .front {
+        position: absolute;
+        width: 100%;
+        z-index: 1000;
+        display: block;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .cardOver.flipped .front {
+        z-index: 1;
+    }
+
+    .cardOver.flipped .back {
+        z-index: 1000;
+        height: 100%;
+        opacity: 1;
+        filter: alpha(opacity=100);
+    }
+
+    .cardOver.flipped {
+        -webkit-transform: rotateY( 180deg );
+        -moz-transform: rotateY( 180deg );
+        -o-transform: rotateY( 180deg );
+        transform: rotateY( 180deg );
+    }
+
+.infoOrder a.contentFlip, a.contentUnFlip {
+    color: #5e5e5e;
+    text-decoration: underline;
+    margin-top: 20px;
+    display:block;
+}
+
+.back h5 {
+    color: #5F615E;
+    font-size: 1.1em;
+}

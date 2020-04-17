@@ -1,0 +1,94 @@
+<div class="small-12 medium-10 columns" id="ifAplicacion" style="height: 570px;">
+    <div class="row align-center">
+        <div class="columns small-12">
+            <h5 class="titleAplication">{{titulo}}</h5>
+        </div>
+
+    </div>
+
+
+    <div id="divBody" class="rgba">
+        <div id="divMenu" class="row">
+
+
+            <div class="medium-2 columns"><a [routerLink]="['/area']" id="bCrear" class="button btnGnral"
+                    accesskey="n">Listar</a></div>
+            <div class="medium-2 columns menuList">
+                <a (click)="resetForm(guardarAreaForm)" id="bBuscar" class="button btnGnral" accesskey="n">Nuevo</a>
+            </div>
+            <div class="medium-2 columns menuList">
+                <button (click)="save()" class="button btnGnral" accesskey="n"
+                    [disabled]="guardarAreaForm.invalid">Guardar
+                </button>
+            </div>
+
+            <div *ngIf="is_edit && area._id" class="medium-2 columns menuForm" style="display: block;">
+                <a (click)="deleteArea()" class="btnBorder button">Eliminar</a>
+            </div>
+        </div>
+
+        <div class="columns medium-12" id="divFormMantenimiento">
+
+            <form #guardarAreaForm="ngForm" autocomplete="off">
+                <div>
+                    <input type="hidden" name="accion" id="accion" value="grabar">
+                    <input type="hidden" name="accionTmp" id="accionTmp">
+                    <input type="hidden" name="jsonTabla" id="jsonTabla" value="sahArea">
+                    <input name="limiteInicio" id="limiteInicio" type="hidden" value="0">
+                    <input type="hidden" name="cantidadRegistros" id="cantidadRegistros" value="200">
+                    <input type="hidden" name="paginaActual" id="paginaActual">
+                    <input type="hidden" name="totalPaginas" id="totalPaginas">
+                </div>
+                <div>
+                    <input type="hidden" id="id" name="id" class="hiddenValor" value=""></div>
+                <div id="div1" class="row">
+                    <div id="div_codigo" class="columns small-12 medium-2">
+                        <label id="labtit_codigo" for="codigo" class="formInput">
+                            <span>Código</span>
+                            <div class="row inputForm">
+                                <input type="text" maxlength name="codigo" #codigo="ngModel" [(ngModel)]="area.codigo"
+                                    class="focus focus" required>
+                                <small *ngIf="!codigo.valid && codigo.touched" class="error-message">El codigo no es
+                                    valido</small>
+                            </div>
+                        </label></div>
+                    <div id="div_nombre" class="columns small-12 medium-4"><label id="labtit_nombre" for="nombre"
+                            class="formInput"><span>Nombre</span>
+                            <div class=" row inputForm">
+                                <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="area.nombre" required
+                                    pattern="[A-Za-z0-9ÁÉÍÓÚáéíóúñÑ ]+$">
+                                <small *ngIf="!nombre.valid && nombre.touched" class="error-message">El nombre no es
+                                    valido</small>
+                            </div>
+                        </label></div>
+                    <div id="div_requiereComanda" class="columns small-12 medium-2"><label id="labtit_requiereComanda"
+                            for="requiereComanda" class="formInput">
+                            <span>Requiere Comanda</span>
+                            <select name="requiereComanda" #requiereComanda="ngModel"
+                                [(ngModel)]="area.requiere_comanda" required>
+                                <option value=""> - - Seleccione Requiere Comanda - - </option>
+                                <option value="true">Sí</option>
+                                <option value="false">No</option>
+                            </select>
+                            <small *ngIf="!requiereComanda.valid && requiereComanda.touched"
+                                class="error-message">Seleccione Requiere Comanda</small>
+                        </label>
+                    </div>
+                    <div id="div_estado" class="columns small-12 medium-2">
+                        <label id="labtit_estado" for="estado" class="formInput">
+                            <span>Estado</span>
+                            <select name="estado" #estado="ngModel" [(ngModel)]="area.estado" required>
+                                <option value=""> - - Seleccione Estado - - </option>
+                                <option value="activo">ACTIVO</option>
+                                <option value="inactivo">INACTIVO</option>
+                            </select>
+                            <small *ngIf="!estado.valid && estado.touched" class="error-message">Seleccione
+                                estado</small>
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>

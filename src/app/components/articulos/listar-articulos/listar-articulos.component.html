@@ -1,0 +1,88 @@
+<div class="small-12 medium-10 columns" id="ifAplicacion" style="height: 570px;">
+  <div class="row align-center">
+    <div class="columns small-12">
+      <h5 class="titleAplication">{{titulo}}</h5>
+    </div>
+    <input type="hidden" id="jsonTabla" name="jsonTabla" value="sahArea">
+    <input type="hidden" id="fechaAuditoria" name="fechaAuditoria">
+
+  </div>
+
+
+  <div id="divBody" class="rgba">
+    <div id="divMenu" class="row">
+       
+        <div class="medium-2 columns menuForm" id="divListar" style="display: none;"><a href="#" id="bListar" class="btnGnral button" accesskey="l"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Listar</font></font></a></div>
+
+        <div class="medium-2 columns" id="divCrear"><a href="#" id="bCrear" class="button btnGnral" accesskey="n"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nuevo</font></font></a></div>
+
+        <div class="medium-2 columns menuList" id="divBuscar"><a href="#" id="bBuscar" class="button btnGnral" accesskey="n"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Buscar</font></font></a></div>
+
+
+
+    </div>
+
+    <div class="row">
+      <div class="columns small-12 medium-12">
+        <div class="row divTitulo">
+          <div class="small-12 columns tituloListado large-4 medium-4">Nombre</div>
+          <div class="small-12 columns tituloListado large-2 medium-2">Código</div>
+          <div class="small-12 columns tituloListado large-2 medium-2">Unidad Medida</div>
+          <div class="small-12 columns tituloListado large-1 medium-1">Control Inventario</div>
+          <div class="small-12 columns tituloListado large-2 medium-2">Estado</div>
+        </div>
+
+        <div id="divDetalle" class="row contenedorListado" style="height: 436.733px;">
+          
+          <div *ngFor="let articulo of articulos" class="row rowCampo hover">
+
+            <div style="text-align: center;" class="small-12 columns visibleResponsive campoListado large-4 medium-4"></div>
+            <div class="columns small-12 hiddenResponsive"><div class="row"><div class="small-6 columns campoListado large-1 medium-1 text" style="text-align: right;">Nombre</div></div></div>
+            <div style="text-align: center;" class="small-12 columns visibleResponsive campoListado large-4 medium-4 text">{{articulo.nombre}}</div>
+            <div class="columns small-12 hiddenResponsive"><div class="row"><div class="small-6 columns campoListado large-1 medium-1 text" style="text-align: left;">{{articulo.nombre}}</div></div></div>
+            <div style="text-align: center;" class="small-12 columns visibleResponsive campoListado large-2 medium-2"></div>
+
+            <div class="columns small-12 hiddenResponsive"><div class="row"><div class="small-6 columns campoListado large-1 medium-1 text" style="text-align: right;">Código</div></div></div>
+            <div style="text-align: center;" class="small-12 columns visibleResponsive campoListado large-2 medium-2 text">{{articulo.codigo}}</div>
+            <div class="columns small-12 hiddenResponsive"><div class="row"><div class="small-6 columns campoListado large-1 medium-1 text" style="text-align: left;">{{articulo.codigo}}</div></div></div>
+            <div style="text-align: center;" class="small-12 columns visibleResponsive campoListado large-2 medium-2"></div>
+
+            <div class="columns small-12 hiddenResponsive"><div class="row"><div class="small-6 columns campoListado large-1 medium-1 text" style="text-align: right;">Unidad Medida</div></div></div>
+            <div style="text-align: center;" class="small-12 columns visibleResponsive campoListado large-2 medium-2 text">{{articulo.unidad_medida}}</div>
+            <div class="columns small-12 hiddenResponsive"><div class="row"><div class="small-6 columns campoListado large-1 medium-1 text" style="text-align: left;">{{articulo.unidad_medida}}</div></div></div>
+            <div style="text-align: center;" class="small-12 columns visibleResponsive campoListado large-1 medium-1"></div>
+
+            
+            <div class="columns small-12 hiddenResponsive"><div class="row"><div class="small-6 columns campoListado large-1 medium-1 text" style="text-align: right;">Control Inventario</div></div></div>
+            <div *ngIf="articulo.control_inventario" style="text-align: center;" class="small-12 columns visibleResponsive campoListado large-1 medium-1 text">Sí</div>
+            <div *ngIf="articulo.control_inventario" class="columns small-12 hiddenResponsive"><div class="row"><div class="small-6 columns campoListado large-1 medium-1 text" style="text-align: left;">Sí</div></div></div>
+            
+            <div *ngIf="!articulo.control_inventario" style="text-align: center;" class="small-12 columns visibleResponsive campoListado large-1 medium-1 text">No</div>
+            <div *ngIf="!articulo.control_inventario" class="columns small-12 hiddenResponsive"><div class="row"><div class="small-6 columns campoListado large-1 medium-1 text" style="text-align: left;">No</div></div></div>
+            
+            
+            <div style="text-align: center;" class="small-12 columns visibleResponsive campoListado large-2 medium-2"></div>
+
+            <div style="text-align: center;" class="small-12 columns visibleResponsive campoListado large-2 medium-2 text">{{articulo.estado | uppercase}}</div>
+            <div class="columns small-12 hiddenResponsive"><div class="row"><div class="small-6 columns campoListado large-1 medium-1 text" style="text-align: left;">{{articulo.estado | uppercase}}</div></div></div>
+
+          </div>
+        
+        </div>
+
+      </div>
+
+
+      
+
+
+    </div>
+    
+  </div>
+
+
+</div>
+
+
+
+
